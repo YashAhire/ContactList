@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: gray;
+}
+
+div{
+    display: grid;
+    place-items: center;
+}
+
+#list{
+    margin-top: 10px;
+}
+
+#list-items{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: 1px solid black;
+    margin-top: 10px;
+    background-color: aqua;
+    max-width: 200px;
+    width: 90%;
+}
+
+.object-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 300px;
+}
+
+#list-items .delete-contact{
+    width: 10%;
+}
+
+.delete-contact > a{
+    color: aliceblue;
+    background-color: red;
+    
+}
+
+.object-items > p {
+    margin: 4px;
+}
+
+#list ul li{
+    list-style-type: none;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
