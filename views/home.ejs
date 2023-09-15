@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/5649a5f974.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!-- our css file should be below all other styles so we can over write it. -->
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading">
+            <i class="fas fa-address-book"></i>
+            My Contact List!
+        </h1>
+        <div id="list">
+            <ul class="list-content">
+                <% for (let i of contact) {%> 
+                    <li id="list-items">
+                        <div class="object-items">
+                            <p><%= i.name %></p>
+                            <p><%= i.phone %></p>
+                        </div>
+
+                        <div class="delete-contact">
+                            <a href="/delete-contact/?id=<%= i._id %>">
+                                <i class="fas fa-window-close"></i>
+                            </a>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+        <form class="form" action="/create-contact" method="post">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="text" name="phone" placeholder="Enter Phone number" required>
+            <button type="submit">Add</button>
+        </form>
+
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
